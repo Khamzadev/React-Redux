@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
+import { fetchCustomers } from "./asyncAction/customers";
 import {
   addCustomerAction,
   removeCustomerAction,
@@ -58,6 +59,12 @@ function App() {
           className="button red"
         >
           Удалить клиента
+        </button>
+        <button
+          onClick={() => dispatch(fetchCustomers())}
+          className="button red"
+        >
+          Получить клиентов из базы
         </button>
       </div>
       <div>
