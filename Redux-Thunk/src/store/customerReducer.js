@@ -10,7 +10,6 @@ export const customerReducer = (state = defaultState, action) => {
       return { ...state, customer: [...state.customer, ...action.payload] };
     case ADD_CUSTOMER:
       return { ...state, customer: [...state.customer, action.payload] };
-
     case REMOVE_CUSTOMER:
       return {
         ...state,
